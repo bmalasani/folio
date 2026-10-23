@@ -1,9 +1,9 @@
 # 000: Environment setup
 
-- Status: In Progress
+- Status:Done
 - Phase: 0
-- Started / finished: Started
-- New dependencies introduced (and why): (fill in; expected: test runner, linter, type checker only)
+- Started / finished: finished
+- New dependencies introduced (and why): pytest, ruff, mypy
 
 ## Goal
 A reproducible Python project where a fresh clone can run the tests with two commands.
@@ -23,12 +23,14 @@ A reproducible Python project where a fresh clone can run the tests with two com
 - ruff for formating, mypy/pyright for static type chekcing and pytest for tesing. created a tests in playgroud/tests
 
 ## Acceptance criteria
-- [ ] Python version pinned and documented
-- [ ] Dependencies isolated from the system Python
-- [ ] One command installs; one command runs tests; one command runs lint and type check
-- [ ] A trivial passing test exists, and you have seen one fail on purpose
-- [ ] Git repository initialized with a sensible ignore file and a first commit
-- [ ] ROADMAP.md, DECISIONS.md, TIMELOG.md, specs/ committed
+- [x] Python version pinned and documented
+- [x] Dependencies isolated from the system Python
+- [x] One command installs; one command runs tests; one command runs lint and type check
+- [x] A trivial passing test exists, and you have seen one fail on purpose
+- [x] Git repository initialized with a sensible ignore file and a first commit
+- [x] ROADMAP.md, DECISIONS.md, TIMELOG.md, specs/ committed
+ 
+ Commands: uv sync, uv run pytest , uv run ruff check, uv run mypy -p playground
 
 ## Test plan
 - A smoke test that proves the package imports from the test environment.

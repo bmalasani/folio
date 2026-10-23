@@ -9,6 +9,10 @@ authors = [
 requires-python = ">=3.12"
 dependencies = []
 
+[tool.mypy]
+mypy_path = "src"
+explicit_package_bases = true
+
 [project.scripts]
 playground = "playground:main"
 
